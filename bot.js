@@ -1,4 +1,4 @@
-require('sever');
+require('./server');
 require('colors');
 require('dotenv').config();
 const config = require('./config/config');
@@ -24,7 +24,7 @@ glob(__dirname + '/commands/*/*.js', function(er, files) {
 			client.aliases.set(alias, props.help.name);
 		});
 	});
-	console.log('[COMANDOS] - Carregados com sucesso'.brightCyan);
+	console.log('[COMANDOS] Carregados com sucesso'.brightCyan);
 });
 
 client.on('ready', () => {
