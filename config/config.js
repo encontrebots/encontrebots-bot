@@ -1,5 +1,5 @@
 module.exports = {
-	prefix: 'bdd',
+	prefix: ['bdd'],
 	token: process.env.TOKEN,
 	mongo: process.env.MONGO
 };
