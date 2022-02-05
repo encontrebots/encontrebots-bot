@@ -1,3 +1,3 @@
 ### Bots de Discord
-[]: # Language: javascript
-[]: # Path: bot.js
+# Language: javascript
+# Path: bot.js
