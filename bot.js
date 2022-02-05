@@ -1,12 +1,12 @@
 require('dotenv').config();
 const config = require('./config');
 const {
-    Client,
-    Collection
+	Client,
+	Collection
 } = require('eris');
 const client = new Client(config.token, {
-    restMode: true,
-    intents: ['all']
+	restMode: true,
+	intents: ['all']
 });
 
 client.commands = new Collection();

@@ -1,8 +1,12 @@
 {
   "name": "botsdediscordbot",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "bot.js",
   "license": "MIT",
+  "scripts": {
+    "start": "node .",
+    "lint": "eslint --fix --ext .js --ignore-path .gitignore ."
+  },
   "dependencies": {
     "eris": "^0.16.1"
   },
