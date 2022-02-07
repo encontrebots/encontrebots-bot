@@ -10,7 +10,7 @@ const EmbedBuilder = require('../../utils/EmbedBuilder').Embed;
 			embed.setFooter("Adg é gay")
 			message.channel.createMessage({
 				content: message.author.mention,
-				embeds: [embed.get()]
+				embeds: [embed]
 			});
 
 };
