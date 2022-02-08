@@ -6,7 +6,7 @@ const EmbedBuilder = require('../../utils/EmbedBuilder').Embed;
 			const embed = new EmbedBuilder();
 			embed.setTitle("Comandos BDD");
 			embed.setColor('#3498DB');
-			embed.setDescription(`**`);
+			embed.setDescription(`**botinfo** - Mostra informações de um bot na botlist!\n**ping** - Mostra o ping do bot!`);
 			embed.setFooter("Adg é gay")
 			message.channel.createMessage({
 				content: message.author.mention,
