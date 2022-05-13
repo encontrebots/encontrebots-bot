@@ -14,7 +14,7 @@
     "eris": "^0.16.1",
     "eris-embed-builder": "^0.1.2",
     "express": "^4.17.2",
-    "glob": "^7.2.0"
+    "glob": "^8.0.3"
   },
   "devDependencies": {
     "eslint": "^8.8.0"
