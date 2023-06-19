@@ -244,10 +244,10 @@ eris-embed-builder@^0.1.2:
   resolved "https://registry.yarnpkg.com/eris-embed-builder/-/eris-embed-builder-0.1.2.tgz#3114fe02026c90233d4946d4c723e697baba37c9"
   integrity sha1-MRT+AgJskCM9SUbUxyPml7q6N8k=
 
-eris@^0.16.1:
-  version "0.16.1"
-  resolved "https://registry.yarnpkg.com/eris/-/eris-0.16.1.tgz#44b0a9220944fc73dd74538cd614826bfbfcde61"
-  integrity sha512-fqjgaddSvUlUjA7s85OvZimLrgCwX58Z6FXOIxdNFJdT6XReJ/LOWZKdew2CaalM8BvN2JKzn98HmKYb3zMhKg==
+eris@^0.17.2:
+  version "0.17.2"
+  resolved "https://registry.yarnpkg.com/eris/-/eris-0.17.2.tgz#927542885b3b2ba6b14fffaaac85aa7ba02dc2ed"
+  integrity sha512-OzffDSL81VooFXfRn56ienSg7J6fagoN8WdkmCHjn0B9a4jUA3bVouMztQiaXT54jHV5jaX9D0mJ/b9/0mFoVg==
   dependencies:
     ws "^8.2.3"
   optionalDependencies:
