@@ -14,7 +14,7 @@ exports.run = async (client, message, args) => {
 			const EmbedBuilder = require('../../utils/EmbedBuilder').Embed;
 			const bot = await client.getRESTUser(data.id);
 			const embed = new EmbedBuilder();
-			embed.setTitle(`${data.status === 'verified' ? '<:bdd_certifiedB:939544894811287563>' : '❌'} BotInfo | ${bot.username}`);
+			embed.setTitle(`${data.status === 'verified' ? '<:bcertified:1120450733909758002>' : '❌'} BotInfo | ${bot.username}`);
 			embed.setColor('#3498DB');
 			embed.setDescription(`**Prefixo:** ${data.prefix}\n>>> ` + data.shortDesc);
 			embed.addField('Dono:', `> 👑 **${data.owner.username}#${data.owner.discriminator}**\n> 📝 **${data.owner.id}**`, true);

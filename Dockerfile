@@ -1,22 +1,19 @@
-FROM node:lts-alpine3.13 AS TEMP
+FROM node:18
 
-WORKDIR /bdd/
+# Create app directory
+WORKDIR /usr/src/app
 
-RUN apk update && apk add --no-cache npm git ca-certificates
-RUN git clone https://github.com/Victoreisdavid/Searcher_bot.git .
-RUN rm -rf /bdd/src/config.js
+# Install app dependencies
+# A wildcard is used to ensure both package.json AND package-lock.json are copied
+# where available (npm@5+)
+COPY package.json ./
+COPY yarn.lock ./
 
-COPY config.yaml /bdd/src/config.js
-COPY .env /bdd/.env
+RUN yarn install
+# If you are building your code for production
+# RUN npm ci --only=production
 
-RUN npm install .
+# Bundle app source
+COPY . .
 
-FROM node:lts-alpine3.13 AS RUNNER
-
-WORKDIR /bdd/
-
-COPY --from=TEMP /bdd/ /bdd/
-
-CMD ["node", "index.js"]
-
-VOLUME ["/bdd/"]
+CMD [ "yarn", "start" ]

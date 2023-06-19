@@ -1,4 +1,4 @@
-require('./server');
+// require('./server');
 require('colors');
 require('dotenv').config();
 const config = require('./config/config');
