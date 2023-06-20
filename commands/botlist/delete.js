@@ -6,6 +6,7 @@ exports.run = async (client, message, args) => {
 	const user = message.mentions[0] || await client.getRESTUser(args[0]).catch(() => {
 		return message.channel.createMessage(`:x: ${message.author.mention} **|** O bot não foi encontrado.`);
 	});
+	const guild = await client.getRESTGuild(config.guild);
 	const uID = user.id;
 	try {
 		const res = await get(`${process.env.DOMAIN}api/bots/${uID}`);
@@ -17,7 +18,7 @@ exports.run = async (client, message, args) => {
 		}).then(async () => {
 			const logs = await client.getRESTChannel(config.logs);
 			await logs.createMessage(`🗑️ <@${data.owner.id}> **|** O bot **${user.username}** foi deletado. [${message.author.mention}]`);
-			await message.guild.kickMember(user.id, 'Bot deletado').catch(() => {});
+			await guild.kickMember(user.id, 'Bot deletado').catch(() => {});
 			await client.removeGuildMemberRole(message.guildID, data.owner.id, config.roles.dev).catch(() => {});
 		});
 	}

@@ -3,6 +3,7 @@ module.exports = {
 	token: process.env.TOKEN,
 	mongo: process.env.MONGO,
 	logs: '1120004180699009118',
+	guild: '1119998748265828372',
 	roles: {
 		dev: '1120003336247201823',
 		verifier: '1120003211797999637',
