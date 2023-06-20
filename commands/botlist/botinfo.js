@@ -33,7 +33,7 @@ exports.run = async (client, message, args) => {
 
 exports.help = {
 	name: 'botinfo',
-	aliases: ['bi', 'bot'],
+	aliases: ['bi', 'bot', 'info'],
 	category: 'info',
 	description: 'Mostra o ping do bot'
 };
