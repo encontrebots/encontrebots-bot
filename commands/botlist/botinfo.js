@@ -9,12 +9,12 @@ exports.run = async (client, message, args) => {
 		return message.channel.createMessage(`:x: ${message.author.mention} **|** O bot não foi encontrado.`);
 	}
 	try {
-		await get(`https://botsdediscord.herokuapp.com/api/bots/${uID}`).then(async (res) => {
+		await get(`${process.env.DOMAIN}api/bots/${uID}`).then(async (res) => {
 			const data = res.data;
 			const EmbedBuilder = require('../../utils/EmbedBuilder').Embed;
 			const bot = await client.getRESTUser(data.id);
 			const embed = new EmbedBuilder();
-			embed.setTitle(`${data.status === 'verified' ? '<:bcertified:1120450733909758002>' : '❌'} BotInfo | ${bot.username}`);
+			embed.setTitle(`${data.status === 'verified' ? '<:bcertified:1120450733909758002>' : '❌'} ${bot.username}`);
 			embed.setColor('#3498DB');
 			embed.setDescription(`**Prefixo:** ${data.prefix}\n>>> ` + data.shortDesc);
 			embed.addField('Dono:', `> 👑 **${data.owner.username}#${data.owner.discriminator}**\n> 📝 **${data.owner.id}**`, true);

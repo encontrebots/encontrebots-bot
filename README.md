@@ -1,3 +1,3 @@
-### Bots de Discord
+### Encontre Bots
 # Language: javascript
 # Path: bot.js

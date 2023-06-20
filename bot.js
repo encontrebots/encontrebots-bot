@@ -31,7 +31,7 @@ client.on('ready', () => {
 	console.log(`[LOGIN] Pronto em ${client.user.username}#${client.user.discriminator} (${client.user.id})`.green);
 	client.editStatus('dnd', {
 		game: client.user.username,
-		name: 'Bots de Discord',
+		name: 'Encontre Bots para seu servidor!',
 		type: 5
 	});
 });
